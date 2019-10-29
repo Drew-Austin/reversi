@@ -14,8 +14,14 @@ function getURLParameters(whichParam)
 
 var username = getURLParameters('username');
 if('undefined' == typeof username || !username){
-        username = "Anonymous_+Math.random();
+        username = "Anonymous_+Math.random()";
 }
 
 
 $('#messages').append('<h4>'+username)+'</h4>';
+
+
+var socket = io.connect();
+socket.on('log', function(array){
+	console.log.apply(console,array);
+});
