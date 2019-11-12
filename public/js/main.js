@@ -87,15 +87,6 @@ socket.on('join_room_response', function(payload){
 	newNode.slideDown(1000);
 
 	
-	socket.on('send_message_response', function(payload){
-        if(payload.result == 'fail'){
-                alert(payload.message);
-                return;
-        }
-        $('#messages').append('<p><b>'+payload.username+' says: </b> '+payload.message+'</p>');
-});
-
-	
 	
 	$('#messages').append('<p> New User Joined the Room: '+payload.username+'</p>');
 });
@@ -121,7 +112,7 @@ socket.on('join_room_response', function(payload){
         	 $('#messages').append(newNode);
        		 newNode.slideDown(1000);
       		  }
-        
+});  
 
 
 socket.on('send_message_response', function(payload){
@@ -165,4 +156,3 @@ function makeInviteButton(){
 	socket.emit('join_room',payload);
 	
 }); 
-});
