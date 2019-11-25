@@ -1,0 +1,24 @@
+body {
+	/*background-image:url('../images/black.png'); */
+}
+
+table#game_board{
+	margin: auto;
+	border-style: solid;
+	border-width: 10px;
+	border-color: rgb(0,0,0);
+	border-collapse: separate;
+}
+
+table#game_board td{
+	padding: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(50,50,50);
+	background-color: rgb(0,0,250);
+}
+
+#messages p{
+	margin: 0px;
+
+}
